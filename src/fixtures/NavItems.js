@@ -1,9 +1,9 @@
- const navItems = [
+const navItems = [
   'Home',
   'Order of Service',
   'Bridal Train',
   'Hymn',
-  'wedding'
+  'wedding',
 ];
 
 export default navItems;
