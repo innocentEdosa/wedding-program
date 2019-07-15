@@ -1,0 +1,63 @@
+@import '../asset/reset';
+@import '../asset/variable';
+@import '../asset/animation';
+
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $sidebar-shadow-color;
+  height: 100vh;
+  width: 100vw;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  &-wrapper {
+    background-color: $sidebar-bg-color;
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    font-size: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.8rem;
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+  }
+
+  &-main{
+    align-self: flex-start;
+    padding-left: 2rem;
+  }
+
+  &-navigation {
+
+    &-list {
+      list-style: none;
+      font-size: 2rem;
+    }
+
+    &-item:not(:last-child) {
+      margin-bottom: .8rem;
+    }
+
+    &-item a {
+      color: $navbrand;
+    }
+
+  }
+
+
+  &-logo {
+    color: $navbrand;
+    font-size: 1.8rem;
+  }
+
+  &-aside {
+    color: $navbrand;
+
+  }
+}

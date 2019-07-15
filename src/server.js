@@ -14,5 +14,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('This is finally working')
+  console.log('This is finally working');
 });

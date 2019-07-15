@@ -1,0 +1,57 @@
+@import '../asset/variable.scss';
+@import '../asset/reset';
+
+.navigation {
+  background: $navbg-1;
+  font-size: 1.8rem;
+  // padding: 2rem 0rem;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-brand {
+    color: $navbrand;
+    padding: 2rem 0rem;
+
+  }
+
+  &-toggler {
+    display: inline-block;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+  &-list {
+    display: none;
+    background-color: transparent;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+
+  @media (min-width: 768px) {
+    &-toggler {
+      display: none;
+    }
+
+   &-list {
+     display: flex;
+     opacity: 1;
+     list-style: none;
+     align-items: center;
+     margin-bottom: 0;
+
+     &-item {
+       &:not(:last-child) {
+         margin-right: 2rem;
+       }
+       color: $primary-color;
+       padding: 2rem 1rem;
+     }
+   }
+  }
+}
