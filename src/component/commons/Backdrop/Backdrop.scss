@@ -1,0 +1,22 @@
+@import '../../asset/variable.scss';
+@import '../../asset/reset';
+@import '../../asset/animation';
+
+
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $sidebar-shadow-color;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity .6s ease-out .2s;
+  z-index: -1;
+
+  &.showBackdrop {
+    opacity: 1;
+    z-index: 10;
+    }
+}

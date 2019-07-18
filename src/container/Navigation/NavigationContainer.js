@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Navigation from '../../component/Navigation/Navigation';
 import SideBar from '../../component/SideBar/Sidebar';
+import Backdrop from '../../component/commons/Backdrop/Backdrop';
 
-const Home = () => {
+const NavigationContainer = () => {
   const [navState, setNavState] = useState({
     displaySidebar: false,
   });
@@ -15,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <Fragment>
       <Navigation
         toggleSidebar={toggleSidebar}
         isSideBarOpen={navState.displaySidebar}
@@ -24,8 +25,9 @@ const Home = () => {
         displaySidebar={navState.displaySidebar}
         closeSidebar={toggleSidebar}
       />
-    </div>
+      <Backdrop hideBackdrop={toggleSidebar} displayBackdrop={navState.displaySidebar} />
+    </Fragment>
   );
 };
 
-export default Home;
+export default NavigationContainer;

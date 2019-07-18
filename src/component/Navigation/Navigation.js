@@ -23,7 +23,7 @@ const Navigation = ({ toggleSidebar, isSideBarOpen }) => {
     };
 
   return (
-    <nav className="navigation">
+    <nav className="navigation fixed-top">
       <div className="container">
         <div className="navigation-wrapper">
           <div className="navigation-brand" href="#">
